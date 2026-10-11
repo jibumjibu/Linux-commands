@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linux Command Knowledge Base</title>
+    <!-- Include SheetJS Library -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #search { width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+
+    <h2>Linux Command Knowledge Base</h2>
+    <input type="text" id="search" placeholder="Search by command, keyword, or description..." onkeyup="searchCommands()">
+
+    <table id="commandsTable">
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Syntax</th>
+                <th>Keywords</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Data will be loaded here via JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
