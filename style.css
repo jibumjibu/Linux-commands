@@ -1,0 +1,103 @@
+/* style.css - Linux Command Knowledge Base Stylesheet */
+
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+    background-color: #f8f9fa;
+    color: #212529;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 { 
+    font-size: 28px;
+    margin-bottom: 20px; 
+    color: #1a1a1a;
+}
+
+#search { 
+    width: 100%; 
+    padding: 16px; 
+    margin-bottom: 24px; 
+    font-size: 18px; 
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+#search:focus {
+    outline: none;
+    border-color: #4dabf7;
+}
+
+table { 
+    width: 100%; 
+    border-collapse: separate; 
+    border-spacing: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+th, td { 
+    padding: 16px; 
+    text-align: left; 
+    border-bottom: 1px solid #edf2f7;
+}
+
+th { 
+    background-color: #f1f3f5; 
+    font-weight: 600;
+    font-size: 16px;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.cmd-title {
+    font-weight: 700; 
+    font-size: 18px; 
+    color: #2b303a;
+}
+
+.cmd-desc {
+    font-size: 14px; 
+    color: #6c757d; 
+    margin-top: 6px; 
+    line-height: 1.4;
+}
+
+code {
+    background-color: #f1f3f5;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 15px;
+    color: #d63384;
+    word-break: break-word;
+}
+
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    body { padding: 12px; }
+    h2 { font-size: 32px; text-align: center; }
+    #search { padding: 18px; font-size: 20px; }
+    th { font-size: 18px; }
+    .cmd-title { font-size: 22px; }
+    .cmd-desc { font-size: 16px; margin-top: 8px; }
+    code { font-size: 18px; padding: 8px 12px; display: inline-block; }
+    th, td { padding: 18px 12px; }
+}

@@ -38,13 +38,17 @@ function parseCSV(text) {
 function displayData(data) {
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = '';
+    
     data.forEach(row => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-            <td><strong>${row.Command || ''}</strong></td>
+            <td>
+                <div style="font-weight: bold; font-size: 16px;">${row.Command || ''}</div>
+                <div style="font-size: 12px; color: #666; margin-top: 4px; font-style: italic;">
+                    ${row.Description || ''}
+                </div>
+            </td>
             <td><code>${row.Syntax || ''}</code></td>
-            <td>${row.Keywords || ''}</td>
-            <td>${row.Description || ''}</td>
         `;
         tbody.appendChild(tr);
     });

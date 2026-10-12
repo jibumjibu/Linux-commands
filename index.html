@@ -2,35 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Command Knowledge Base</title>
-    <!-- Look! No external libraries needed anymore -->
+    
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
     <script src="script.js" defer></script>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        #search { width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #f4f4f4; }
-    </style>
 </head>
 <body>
 
-    <h2>Linux Command Knowledge Base</h2>
-    <input type="text" id="search" placeholder="Search by command, keyword, or description..." onkeyup="searchCommands()">
+    <div class="container">
+        <h2>Linux Command Knowledge Base</h2>
+        <input type="text" id="search" placeholder="Search by command, keyword, or description..." onkeyup="searchCommands()">
 
-    <table id="commandsTable">
-        <thead>
-            <tr>
-                <th>Command</th>
-                <th>Syntax</th>
-                <th>Keywords</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody">
-            <!-- Data will load here -->
-        </tbody>
-    </table>
+        <table id="commandsTable">
+            <thead>
+                <tr>
+                    <th style="width: 40%;">Command</th>
+                    <th style="width: 60%;">Syntax</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data loads here -->
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>
