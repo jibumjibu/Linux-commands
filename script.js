@@ -1,27 +1,23 @@
 let commandData = [];
 
-window.addEventListener('load', function() {
-    if (typeof XLSX === 'undefined') {
-        alert("CRITICAL ERROR: The XLSX library is completely missing or blocked by your browser/network. Try turning off ad-blockers or extensions.");
-        return;
-    }
-
+// Load and parse the XLSX file when the page loads
+window.onload = function() {
+    // Replace 'commands.xlsx' with the actual path to your file in the repo
     fetch('commands.xlsx')
-        .then(res => {
-            if (!res.ok) throw new Error("Could not find commands.xlsx file");
-            return res.arrayBuffer();
-        })
+        .then(res => res.arrayBuffer())
         .then(ab => {
             const wb = XLSX.read(ab, { type: 'array' });
-            const firstSheetName = wb.SheetNames; 
+            const firstSheetName = wb.SheetNames[0];
             const worksheet = wb.Sheets[firstSheetName];
             
+            // Convert sheet data to a JSON array of objects
             commandData = XLSX.utils.sheet_to_json(worksheet);
             displayData(commandData);
         })
         .catch(err => console.error("Error loading Excel file:", err));
-});
+};
 
+// Function to render rows into the table
 function displayData(data) {
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = '';

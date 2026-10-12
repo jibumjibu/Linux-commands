@@ -1,0 +1,2 @@
+﻿Command,Syntax,Keywords,Description
+ls,ls [options] [directory],"list, folders, view, directory, ",list files and directories
