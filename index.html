@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Linux Command Knowledge Base</title>
-    <!-- Include SheetJS Library -->
-    <script src="xlsx.full.min.js"></script>
+    <!-- Look! No external libraries needed anymore -->
+    <script src="script.js" defer></script>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         #search { width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px; }
@@ -28,10 +28,9 @@
             </tr>
         </thead>
         <tbody id="tableBody">
-            <!-- Data will be loaded here via JavaScript -->
+            <!-- Data will load here -->
         </tbody>
     </table>
 
-    <script src="script.js"></script>
 </body>
 </html>
