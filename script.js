@@ -1,10 +1,8 @@
 let commandData = [];
 
-// Wait for the entire window and all scripts to be fully loaded
 window.addEventListener('load', function() {
-    // Check if the library actually loaded
     if (typeof XLSX === 'undefined') {
-        console.error("Critical Error: The SheetJS (XLSX) library is still not loaded in the browser. Check your index.html script tags.");
+        alert("CRITICAL ERROR: The XLSX library is completely missing or blocked by your browser/network. Try turning off ad-blockers or extensions.");
         return;
     }
 
@@ -15,7 +13,7 @@ window.addEventListener('load', function() {
         })
         .then(ab => {
             const wb = XLSX.read(ab, { type: 'array' });
-            const firstSheetName = wb.SheetNames[0];
+            const firstSheetName = wb.SheetNames; 
             const worksheet = wb.Sheets[firstSheetName];
             
             commandData = XLSX.utils.sheet_to_json(worksheet);
@@ -24,11 +22,9 @@ window.addEventListener('load', function() {
         .catch(err => console.error("Error loading Excel file:", err));
 });
 
-// Function to render rows into the table
 function displayData(data) {
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = '';
-
     data.forEach(row => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
@@ -41,10 +37,8 @@ function displayData(data) {
     });
 }
 
-// Function to filter data based on search input
 function searchCommands() {
     const searchVal = document.getElementById('search').value.toLowerCase();
-    
     const filtered = commandData.filter(row => {
         return (
             (row.Command && row.Command.toLowerCase().includes(searchVal)) ||
@@ -53,6 +47,5 @@ function searchCommands() {
             (row.Description && row.Description.toLowerCase().includes(searchVal))
         );
     });
-    
     displayData(filtered);
 }
