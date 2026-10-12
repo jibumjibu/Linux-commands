@@ -1,3 +1,28 @@
 ﻿Command,Syntax,Keywords,Description
-ls,ls [options] [directory],"list, folders, view, directory, ",list files and directories
+ls,ls [options] [directory],"list, folders, view, directory", list files and directories
 cat,cat [file name],"display, read, print",Concatenate and print (display) the content of files
+pwd,pwd,"path, current, directory, display, full path", Display full path of the current directory
+mkdir,mkdir directory_name,"new, create",Create new directory or folders
+cd,cd directory_name,"change, current, working", Change the current working directory
+rmdir,rmdir directory_name,"remove, delete, empty", Delete empty directories
+cp,cp source desitination,"copy, files", copy files or directories
+mv,mv old_name new_name,"move, rename", move or rename files and directories
+rm,rm file_name,"delete, permanently", delete files permanently
+uname,uname [OPTIONS],"display, system, operating system", display system information
+locate, locate file_name,"locate, find, database", find files using a database
+touch,touch file_name, "empty, create, update, timestamps", create empty files and updates file timestamps
+ps,ps,"running process, task", display running processes
+ln,ln -s source link_name,"links",create links between files
+man,man command_name,"manuals, help",display command manuals
+grep,grep "text" file_name,"search,pattern,text,find", search text patterns
+echo,echo "text","text, terminal, display",display text in the terminal
+wget,wget url,"download,internet,files,url",download files from the internet using URL
+whoami,whoami,"user,current user",display the current user
+sort,sort file_name,"sort, file content",sort file contents
+cal,cal,"calendar",display the calendar
+whereis,whereis command_name,"locate, command",locate command files
+df,df [OPTIONS], "disk, space, usage", display disk space usage
+wc,wc [OPTION] file_name,"number of lines, words, bytes", display number of lines, words, and bytes in the file
+tail, tail -[no. of lines] file_name,"end, last, lines", displays lines from the end of a file
+head, head -[no. of lines] file_name,"top, lines, first" displays lines from the top of a file
+ls, ls .[extension],"extension, file, list", list files ending with specific extension
