@@ -26,3 +26,41 @@ wc,wc [OPTION] file_name,"number of lines, words, bytes", display number of line
 tail, tail -[no. of lines] file_name,"end, last, lines", displays lines from the end of a file
 head, head -[no. of lines] file_name,"top, lines, first" displays lines from the top of a file
 ls, ls .[extension],"extension, file, list", list files ending with specific extension
+chmod, chmod [options] mode file_name, "permissions, access", change the access permissions (read, write, or execute) of files and directories for the owner, group, and others
+chattr, chattr [options] attribute file_name, "attributes, special", change special attributes of files in Linux. These attributes provide extra protection beyond standard file permissions.
+chown, chown [options] owner[:group] file_name, "ownership", change the ownership of files and directories. Allows administrators to assign files to specific users and groups.
+chgrp, chgrp [options] group file_name, "group, ownership", change the group ownership of files and directories. It helps manage shared access among users belonging to the same group.
+ps, ps, "process, running, current shell session", displays the processes running in the current shell session.
+ps, ps -e, "process, running, all", Display All Running Processes
+ps, ps -f, "process, running, format", Display Full Process Format
+ps, ps -u username ps -u root, "process, user, specific", Display Processes for a Specific User
+ps, ps -x, "process, running", Show Processes Without a Controlling Terminal
+ps, ps -a, "process, running, users", Display Processes for All Users With a Terminal
+ps, ps -p process_id ps -p pid1,pid2,pid3, "process, process ID, running", Display Process by Process ID
+ps, ps -ef --forest, "process, tree, hierarchy", displays processes in a hierarchical tree format, showing parent-child relationships between processes.
+ps, ps -A, "processs, all, running", displays all running processes
+ps, ps -d, "process, all, leader, session leader", lists all processes except session leaders. This helps filter out top-level processes when analyzing system activity.
+ps, ps aux, "process, all, running", displays a detailed view of all running processes including user processes, system services, and background tasks.
+ps, ps -T, "process, all, current, terminal", displays all processes associated with the current terminal session.
+ps, ps -C command_name, "process, command", filters processes based on the command name (executable name)
+ps, ps -G group_name, "process, group", displays processes belonging to a specific group
+ps, ps -g group_id, "process, group id", displays processes belonging to a specific group ID (GID).
+top, top, "realtime, process, running", top Command to List Running Processes. top updates the process list automatically every few seconds.
+htop, htop, "process, color, graphs", displays system information using colors, graphs, and easier navigation controls.
+pgrep, pgrep, "prceoss, id", searches for running processes based on a name or pattern and returns their Process IDs
+kill. kill PID, "kill, terminate, pause", send signals to processes in order to control their execution
+kill, kill -STOP PID, "pause", Pause a Running Process
+kill, kill -CONT PID, "continue, resume", Resume a Paused Process
+ifconfig, ifconfig, "ip address, network", Finding Your IP Address in Linux
+ifconfig, ifconfig -a, "network, interface", Display all interfaces, including those that are down
+ifconfig, ifconfig -s, "network, interface", Display a short list, instead of details
+ifconfig, ifconfig -v, "verbose, network", Run the command in verbose mode
+ifconfig, ifconfig interface up, "driver", Activate the driver for the given interface
+ifconfig, ifconfig interface down, "driver", Deactivate the driver for the given interface
+ifconfig, ifconfig interface add addr/prefixlen, "ipv6, network", Add an IPv6 address to an interface
+ifconfig, ifconfig interface del addr/prefixlen, "ipv6, network", Remove an IPv6 address from an interface
+ifconfig, ifconfig interface [-]arp, "arp, protocol, network", Enable/disable the use of ARP protocol on an interface
+ifconfig, ifconfig interface [-]promisc, "interface, enable, disable, network", Enable/disable promiscuous mode on an interface
+ifconfig, ifconfig interface [-]allmulti, "interface, multicast", Enable/disable all-multicast mode for an interface
+ifconfig, ifconfig interface mtu size, "mtu, maximum", Set the Maximum Transfer Unit (MTU)
+ip addr show, ip addr show, "ip address", Displaying Network Interfaces and IP Addresses
