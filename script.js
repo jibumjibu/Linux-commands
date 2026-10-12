@@ -21,6 +21,7 @@ window.onload = function() {
 function displayData(data) {
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = '';
+
     data.forEach(row => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
@@ -33,8 +34,10 @@ function displayData(data) {
     });
 }
 
+// Function to filter data based on search input
 function searchCommands() {
     const searchVal = document.getElementById('search').value.toLowerCase();
+    
     const filtered = commandData.filter(row => {
         return (
             (row.Command && row.Command.toLowerCase().includes(searchVal)) ||
@@ -43,5 +46,6 @@ function searchCommands() {
             (row.Description && row.Description.toLowerCase().includes(searchVal))
         );
     });
+    
     displayData(filtered);
 }
