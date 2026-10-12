@@ -1,2 +1,3 @@
 ﻿Command,Syntax,Keywords,Description
 ls,ls [options] [directory],"list, folders, view, directory, ",list files and directories
+cat,cat [file name],"display, read, print",Concatenate and print (display) the content of files
