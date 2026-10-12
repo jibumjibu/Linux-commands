@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Linux Command Knowledge Base</title>
     <script src="https://cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    <script>
+        if (typeof XLSX === 'undefined') {
+            document.write('<script src="https://jsdelivr.net"><\/script>');
+        }
+    </script>
+    <script src="script.js" defer></script>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         #search { width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px; }
