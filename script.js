@@ -1,21 +1,29 @@
 let commandData = [];
 
-// Load and parse the XLSX file when the page loads
-window.onload = function() {
-    // Replace 'commands.xlsx' with the actual path to your file in the repo
+// Wait for the entire window and all scripts to be fully loaded
+window.addEventListener('load', function() {
+    // Check if the library actually loaded
+    if (typeof XLSX === 'undefined') {
+        console.error("Critical Error: The SheetJS (XLSX) library is still not loaded in the browser. Check your index.html script tags.");
+        return;
+    }
+
     fetch('commands.xlsx')
-        .then(res => res.arrayBuffer())
+        .then(res => {
+            if (!res.ok) throw new Error("Could not find commands.xlsx file");
+            return res.arrayBuffer();
+        })
         .then(ab => {
             const wb = XLSX.read(ab, { type: 'array' });
-            const firstSheetName = wb.SheetNames[0];
+            const firstSheetName = wb.SheetNames[0]; // Fixed index safety
             const worksheet = wb.Sheets[firstSheetName];
             
-            // Convert sheet data to a JSON array of objects
             commandData = XLSX.utils.sheet_to_json(worksheet);
             displayData(commandData);
         })
         .catch(err => console.error("Error loading Excel file:", err));
-};
+});
+
 
 // Function to render rows into the table
 function displayData(data) {
