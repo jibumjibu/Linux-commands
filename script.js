@@ -15,8 +15,8 @@ window.addEventListener('load', function() {
         })
         .then(ab => {
             const wb = XLSX.read(ab, { type: 'array' });
-            const firstSheetName = wb.SheetNames[0]; // Fixed index safety
-            const worksheet = wb.Sheets[Sheet1];
+            const firstSheetName = wb.SheetNames[0];
+            const worksheet = wb.Sheets[firstSheetName];
             
             commandData = XLSX.utils.sheet_to_json(worksheet);
             displayData(commandData);
