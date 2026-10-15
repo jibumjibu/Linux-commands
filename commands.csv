@@ -67,3 +67,4 @@ ifconfig, ifconfig interface mtu size, "mtu, maximum", Set the Maximum Transfer 
 ip addr show, ip addr show, "ip address", Displaying Network Interfaces and IP Addresses
 which, which [command], "command, fullpath, executable file", locate the full pathname of an executable file (or binary) associated with a given command
 cd /, cd /, "root, shortcut", go back to  root dir
+sudo -i, sudo -i, "root, user", log the current user into the user account
