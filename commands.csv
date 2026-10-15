@@ -66,3 +66,4 @@ adduser, adduser [user name], "new user, add user", add new user
 ifconfig, ifconfig interface mtu size, "mtu, maximum", Set the Maximum Transfer Unit (MTU)
 ip addr show, ip addr show, "ip address", Displaying Network Interfaces and IP Addresses
 which, which [command], "command, fullpath, executable file", locate the full pathname of an executable file (or binary) associated with a given command
+cd /, cd /, "root, shortcut", go back to  root dir
