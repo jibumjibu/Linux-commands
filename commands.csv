@@ -62,5 +62,7 @@ ifconfig, ifconfig interface del addr/prefixlen, "ipv6, network", Remove an IPv6
 ifconfig, ifconfig interface [-]arp, "arp, protocol, network", Enable/disable the use of ARP protocol on an interface
 ifconfig, ifconfig interface [-]promisc, "interface, enable, disable, network", Enable/disable promiscuous mode on an interface
 ifconfig, ifconfig interface [-]allmulti, "interface, multicast", Enable/disable all-multicast mode for an interface
+adduser, adduser [user name], "new user, add user", add new user
+
 ifconfig, ifconfig interface mtu size, "mtu, maximum", Set the Maximum Transfer Unit (MTU)
 ip addr show, ip addr show, "ip address", Displaying Network Interfaces and IP Addresses
