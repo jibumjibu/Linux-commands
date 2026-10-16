@@ -68,3 +68,24 @@ ip addr show, ip addr show, "ip address", Displaying Network Interfaces and IP A
 which, which [command], "command, fullpath, executable file", locate the full pathname of an executable file (or binary) associated with a given command
 cd /, cd /, "root, shortcut", go back to  root dir
 sudo -i, sudo -i, "root, user", log the current user into the user account
+id, id, "id, user, group", Print user and group id’s
+hostname, hostname, "name, system", Print or set system name
+uname, uname, "information, system", Print system information
+ip, ip, "devices, routing, tunnels", Routing, devices and tunnels
+netstat, netstat, "network, connection, stats", Networking connections/stats
+ss, ss, "socket, statistics", Socket Statistics
+who, who, "username, print, logged-in", Print all usernames currently logged in
+env, env, "environment, variables", Environment variables
+lsblk, lsblk, "devices, block, list", List block devices
+lsof, lsof, "open, files", List open files
+lsusb, lsusb, "usb, connected", displays information about USB buses and the hardware devices connected
+apropos, apropos, "search, command, help, keyword", a built-in terminal tool used to search the names and descriptions of manual (man) pages for specific keywords
+usermod sudo usermod [options] USERNAME, "user, modify, attributes", modify existing user account attributes
+su, su [options] [username], "switch user", switch your current shell session to another user account
+sudo visudo, sudo visudo, "edit, sudoers", standard command used to safely edit the /etc/sudoers file
+userdel, sudo userdel [options] <username>, "delete, remove, user", delete user accounts and remove corresponding entries from system account files
+groupadd, sudo groupadd [options] group_name, "group, add", creates a new user group
+gpasswd, gpasswd [option] group, "group, edit, administer", administer the /etc/group
+groupdel, groupdel group, "delete, group", delete a group
+sudo dpkg, sudo dpkg [options] package_name.deb, "install, package, software, uninstall", package manager for Debian-based Linux systems
+apt, apt [option] package-name, "package manager, install, uninstall, remove",  user-friendly, high-level package manager for Debian-based Linux systems
